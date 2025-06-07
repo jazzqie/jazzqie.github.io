@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="blackpencil.png" type="image/png">
+  <title>Плейлісти — BeatCloud</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">BeatCloud
+        <img src="logotype.png" alt="logotype  BeatCloud" style="width: 50px; height: 50px;">
+    </div>
+  </header>
+   <nav>
+    <a href="index.html">Головна</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="artists.html">Артисти</a>
+    <a href="playlists.html">Плейлісти</a>
+    <a href="my-tracks.html">Мої треки</a>
+    <a href="about.html">Про нас</a>
+    <div style="display: flex; gap: 15px; align-items: center;">
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/BeatCloud/" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+         alt="Instagram" style="width:40px; height:40px;">
+  </a>
+
+  <!-- YouTube -->
+  <a href="https://www.youtube.com/@BeatCloud" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+         alt="YouTube" style="width:40px; height:auto;">
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/BeatCloud/" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+         alt="LinkedIn" style="width:40px; height:40px;">
+  </a>
+</div>
+  </nav>
+  
+
+  
+  <main>
+    <section>
+      <center><h1>Плейлісти</h1>
+      <h3>Обирай серед тематичних плейлістів.</h3></center>
+
+      <div class="playlists-container">
+        <div class="playlist">
+          <img src="playlists/energetic-rock.jpg"Енергійний Рок" class="playlist-cover" height="150" width="150">
+          <div class="playlist-info">
+            <div class="playlist-title">Енергійний Рок</div>
+            <div class="playlist-description">Відчуй потужність рок-музики</div>
+          </div>
+          <div class="tracklist">
+            <div class="track-item" onclick="playTrack('tracks/Sonne.mp3')">Sonne - Rammstein</div>
+            <div class="track-item" onclick="playTrack('tracks/Korn - Freak On A Leash.mp3')">Freak On A Leash - Korn</div>
+            <div class="track-item" onclick="playTrack('tracks/Pantera - Floods.mp3')">Floods - Pantera</div>
+            <div class="track-item" onclick="playTrack('tracks/Nirvana - Heart Shaped Box .mp3')">Heart Shaped Box - Nirvana</div>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <img src="playlists/chilling-indie.jpg" alt="Розслабляючий Інді" class="playlist-cover" height="150" width="150">
+          <div class="playlist-info">
+            <div class="playlist-title">Розслабляючий Інді</div>
+            <div class="playlist-description">Ідеально для відпочинку та роздумів.</div>
+          </div>
+          <div class="tracklist">
+            <div class="track-item" onclick="playTrack('tracks/Mac DeMarco - Chamber Of Reflection.mp3')">Chamber Of Reflection - Mac DeMarco</div>
+            <div class="track-item" onclick="playTrack('tracks/Tame Impala - Let It Happen.mp3')">Let It Happen - Tame Impala</div>
+            <div class="track-item" onclick="playTrack('tracks/Gorillaz - Feel Good Inc.mp3')">Feel Good Inc. - Gorillaz</div>
+            <div class="track-item" onclick="playTrack('tracks/Radiohead - Creep.mp3')">Creep - Radiohead</div>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <img src="playlists/classic-rock.jpg" alt="Класика Металу" class="playlist-cover" height="150" width="150">
+          <div class="playlist-info">
+            <div class="playlist-title">Класика Металу</div>
+            <div class="playlist-description">Найкращі хіти важкої музики</div>
+          </div>
+          <div class="tracklist">
+            <div class="track-item" onclick="playTrack('tracks/Black Sabbath - Paranoid.mp3')">Paranoid - Black Sabbath</div>
+             <div class="track-item" onclick="playTrack('tracks/Metallica.mp3')">Enter Sandman - Metallica</div>
+             <div class="track-item" onclick="playTrack('tracks/AC-DC - Thunderstruck.mp3')">Thunderstruck - AC/DC</div>
+            <div class="track-item" onclick="playTrack('albums/Paranoid/Black Sabbath - Iron Man. ')">Iron Man - Black Sabbath</div>
+          </div>
+        </div>
+        <div class="playlist">
+          <img src="playlists/hip-hop.webp" alt="Хіп-Хоп Вайби" class="playlist-cover" height="150" width="150">
+          <div class="playlist-info">
+            <div class="playlist-title">Хіп-Хоп Вайби</div>
+            <div class="playlist-description">Для любителів ритмічних бітів</div>
+          </div>
+          <div class="tracklist">
+            <div class="track-item" onclick="playTrack('tracks/Kendrick.mp3')">HUMBLE. - Kendrick Lamar</div>
+            <div class="track-item" onclick="playTrack('albums/Graduation/Flashing Lights.mp3')">Flashing Lights - Kanye West</div>
+            <div class="track-item" onclick="playTrack('tracks/Travis Scott Fe!n.mp3')">FE!N - Travis Scott </div>
+            <div class="track-item" onclick="playTrack('albums/DAMN/DUCKWORTH..mp3')">DUCKWORTH. - Kendrick Lamar</div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <div id="player">
+    <audio controls>
+      <source src="sample.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script src="player.js"></script>
+</body>
+</html>

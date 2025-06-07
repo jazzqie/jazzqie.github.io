@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="blackpencil.png" type="image/png">
+  <title>Каталог — BeatCloud</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+     <div class="logo">BeatCloud
+        <img src="logotype.png" alt="logotype  BeatCloud" style="width: 50px; height: 50px;">
+    </div>
+    </header>
+   <nav>
+    <a href="index.html">Головна</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="artists.html">Артисти</a>
+    <a href="playlists.html">Плейлісти</a>
+    <a href="my-tracks.html">Мої треки</a>
+    <a href="about.html">Про нас</a>
+    <div style="display: flex; gap: 15px; align-items: center;">
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/BeatCloud/" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+         alt="Instagram" style="width:40px; height:40px;">
+  </a>
+
+  <!-- YouTube -->
+  <a href="https://www.youtube.com/@BeatCloud" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+         alt="YouTube" style="width:40px; height:auto;">
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/BeatCloud/" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+         alt="LinkedIn" style="width:40px; height:40px;">
+  </a>
+</div>
+  </nav>
+  
+
+  <main>
+    <section>
+      <h1>Каталог</h1>
+      <p>Переглянь усі доступні треки та альбоми.</p>
+     <p> Досліджуйте тисячі треків різних жанрів, від інді-попу до драм-н-бейсу. </p>
+   <center> <h3>Пісні</h3></center>
+      <div class="catalog-container">
+  <!-- Перший ряд (5 треків) -->
+  <div class="track" onclick="playTrack('tracks/Sonne.mp3')">
+    <img src="covers/sonne.jpg" alt="sonne" class="track-cover" height="100" width="100">
+    <div class="track-title">Sonne</div>
+    <div class="track-artist">Rammstein</div>
+  </div>
+  
+  <div class="track" onclick="playTrack('tracks/Korn - Freak On A Leash.mp3')">
+    <img src="covers/freak.jpg" alt="freak on a leash" class="track-cover" height="100" width="100">
+    <div class="track-title">Freak On A Leash</div>
+    <div class="track-artist">Korn</div>
+  </div>
+  
+  <div class="track" onclick="playTrack('tracks/Gorillaz - Feel Good Inc.mp3')">
+    <img src="covers/feelgood.jpg" alt="Feelgood" class="track-cover" height="100" width="100">
+    <div class="track-title">Feel Good Inc.</div>
+    <div class="track-artist">Gorillaz</div>
+  </div>
+  
+  <div class="track" onclick="playTrack('tracks/Mac DeMarco - Chamber Of Reflection.mp3')">
+    <img src="covers/chamber.jpg" alt="chamber" class="track-cover" height="100" width="100">
+    <div class="track-title">Chamber Of Reflection</div>
+    <div class="track-artist">Mac DeMarco</div>
+  </div>
+  
+  <div class="track" onclick="playTrack('tracks/Rednex - Cotton Eyed Joe.mp3')">
+    <img src="covers/roflnagget.jpg" alt="rednex" class="track-cover" height="100" width="100">
+    <div class="track-title">Cotton Eyed Joe</div>
+    <div class="track-artist">Rednex</div>
+  </div>
+
+  <!-- Другий ряд (5 треків) -->
+  <div class="track" onclick="playTrack('tracks/Pantera - Floods.mp3')">
+    <img src="covers/floods.jpg" alt="floods" class="track-cover" height="100" width="100">
+    <div class="track-title">Floods</div>
+    <div class="track-artist">Pantera</div>
+  </div>
+
+  <div class="track" onclick="playTrack('tracks/Travis Scott Fe!n.mp3')">
+    <img src="covers/fein.png" alt="fein" class="track-cover" height="100" width="100">
+    <div class="track-title">FE!N</div>
+    <div class="track-artist">Travis Scott</div>
+  </div>
+  
+  <div class="track" onclick="playTrack('tracks/Skrillex & Damian Marley - Make It Bun Dem.mp3')">
+    <img src="covers/farcrytrava.jpg" alt="Make it Bun" class="track-cover" height="100" width="100">
+    <div class="track-title">Make It Bun Dem</div>
+    <div class="track-artist">Skrillex & Damian Marley</div>
+  </div>
+
+  <div class="track" onclick="playTrack('tracks/Tame Impala - Let It Happen.mp3')">
+    <img src="covers/letithappen.jpg" alt="let it happen" class="track-cover" height="100" width="100">
+    <div class="track-title">Let It Happen</div>
+    <div class="track-artist">Tame Impala</div>
+  </div>
+
+  <div class="track" onclick="playTrack('tracks/Radiohead - Creep.mp3')">
+    <img src="covers/creep.jpg" alt="creep" class="track-cover" height="100" width="100">
+    <div class="track-title">Creep</div>
+    <div class="track-artist">Radiohead</div>
+  </div>
+
+  <!-- Третій ряд (5 треків) -->
+  <div class="track" onclick="playTrack('tracks/Kanye West feat. Dwele - Flash Lights.mp3')">
+    <img src="covers/flashlights.jpg" alt="flashlights" class="track-cover" height="100" width="100">
+    <div class="track-title">Flashing Lights</div>
+    <div class="track-artist">Kanye West</div>
+  </div>
+
+  <div class="track" onclick="playTrack('tracks/Marty Robbins - Big Iron.mp3')">
+    <img src="covers/bigiron.jpg" alt="bigiron" class="track-cover" height="100" width="100">
+    <div class="track-title">Big Iron</div>
+    <div class="track-artist">Marty Robbins</div>
+  </div>
+
+  <div class="track" onclick="playTrack('tracks/AC-DC - Thunderstruck.mp3')">
+    <img src="covers/acdc.jpg" alt="acdc" class="track-cover" height="100" width="100">
+    <div class="track-title">Thunderstruck</div>
+    <div class="track-artist">AC/DC</div>
+  </div>
+
+  <div class="track" onclick="playTrack('tracks/Nirvana - Heart Shaped Box .mp3')">
+    <img src="covers/patriotlisten.jpg" alt="patriot" class="track-cover" height="100" width="100">
+    <div class="track-title">Heart Shaped Box</div>
+    <div class="track-artist">Nirvana</div>
+  </div>
+
+  <div class="track" onclick="playTrack('tracks/Black Sabbath - Paranoid.mp3')">
+    <img src="covers/sabbath.png" alt="sabbath" class="track-cover" height="100" width="100">
+    <div class="track-title">Paranoid</div>
+    <div class="track-artist">Black Sabbath</div>
+  </div>
+</div>
+    </section>
+
+    <section>
+<center> <h3>Альбоми</h3></center>
+  <div class="catalog-container">
+    <div class="album">
+      <img src="covers/humble_kendrick.jpg" alt="DAMN." class="album-cover" height="150" width="150">
+      <div class="album-artist">Kendrick Lamar</div>
+      <div class="album-title">DAMN.</div>
+      <div class="tracklist">
+        <div class="track-item" onclick="playTrack('albums/DAMN/BLOOD..mp3')">BLOOD.</div>
+        <div class="track-item" onclick="playTrack('albums/DAMN/DNA - Kendrick Lamar (AUDIO).mp3')">DNA</div>
+        <div class="track-item" onclick="playTrack('albums/DAMN/YAH..mp3')">YAH.</div>
+        <div class="track-item" onclick="playTrack('albums/DAMN/ELEMENT..mp3')">ELEMENT.</div>
+        <div class="track-item" onclick="playTrack('albums/DAMN/FEEL..mp3')">FEEL.</div>
+         <div class="track-item" onclick="playTrack('albums/DAMN/LOYALTY..mp3')">LOYALTY.</div>
+          <div class="track-item" onclick="playTrack('albums/DAMN/PRIDE..mp3')">PRIDE.</div>
+           <div class="track-item" onclick="playTrack('albums/DAMN/HUMBLE.mp3')">HUMBLE.</div>
+            <div class="track-item" onclick="playTrack('albums/DAMN/LUST..mp3')">LUST.</div>
+             <div class="track-item" onclick="playTrack('albums/DAMN/LOVE..mp3')">LOVE.</div>
+              <div class="track-item" onclick="playTrack('albums/DAMN/XXX..mp3')">XXX.</div>
+               <div class="track-item" onclick="playTrack('albums/DAMN/FEAR..mp3')">FEAR.</div>
+                <div class="track-item" onclick="playTrack('albums/DAMN/GOD..mp3')">GOD.</div>
+                 <div class="track-item" onclick="playTrack('albums/DAMN/DUCKWORTH..mp3')">DUCKWORTH.</div>
+      </div>
+    </div>
+      
+  <div class="album">
+      <img src="covers/sabbath.png" alt="Paranoid" class="album-cover" height="150" width="150">
+      <div class="album-artist">Black Sabbath</div>
+      <div class="album-title">Paranoid</div>
+      <div class="tracklist">
+    <div class="track-item" onclick="playTrack('albums/Paranoid/Black Sabbath - War Pigs.mp3')">War Pigs</div>
+        <div class="track-item" onclick="playTrack('albums/Paranoid/Black Sabbath - Paranoid.mp3')">Paranoid</div>
+        <div class="track-item" onclick="playTrack('albums/Paranoid/Planet Caravan - Black Sabbath.mp3')">Black Sabbath</div>
+        <div class="track-item" onclick="playTrack('albums/Paranoid/Black Sabbath - Iron Man.mp3')">Iron Man</div>
+        <div class="track-item" onclick="playTrack('albums/Paranoid/Black Sabbath - Electric Funeral.mp3')">Electric Funeral</div>
+         <div class="track-item" onclick="playTrack('albums/Paranoid/Black Sabbath - Hand of Doom.mp3')">Hand of Doom</div>
+          <div class="track-item" onclick="playTrack('albums/Paranoid/Black Sabbath - Rat Salad.mp3')">Rat Salad</div>
+           <div class="track-item" onclick="playTrack('albums/Paranoid/Black Sabbath - Fairies Wear Boots.mp3')">Fairies Wear Boots</div>
+      </div>
+    </div>
+       <div class="album">
+      <img src="covers/letithappen.jpg" alt="Currents" class="album-cover" height="150" width="150">
+      <div class="album-artist">Tame Impala</div>
+      <div class="album-title">Currents</div>
+      <div class="tracklist">
+        <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Let It Happen (Official Video).mp3')">Let It Happen</div>
+        <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Nangs (Audio).mp3')">Nangs</div>
+        <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - The Moment (Audio).mp3')">The Moment</div>
+        <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Yes Im Changing (Audio).mp3')">Yes Im Changing</div>
+        <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Eventually (Audio).mp3')">Eventually</div>
+         <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Gossip (Audio).mp3')">Gossip</div>
+          <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - The Less I Know The Better (Audio).mp3')">The Less I Know The Better</div>
+           <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Past Life (Audio).mp3')">Past Life</div>
+            <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Disciples (Audio).mp3')">Disciples</div>
+             <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Cause Im A Man (Official Video).mp3')">Cause Im A Man</div>
+              <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - Reality In Motion (Audio).mp3')">Reality In Motion</div>
+               <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - LoveParanoia (Audio).mp3')">LoveParanoia</div>
+                <div class="track-item" onclick="playTrack('albums/Currents/Tame Impala - New Person, Same Old Mistakes (Audio).mp3')">New Person, Same Old Mistakes</div>
+            
+      </div>
+    </div>
+
+     <div class="album">
+      <img src="covers/flashlights.jpg" alt="Graduation" class="album-cover" height="150" width="150">
+      <div class="album-artist">Kanye West</div>
+      <div class="album-title">Graduation</div>
+      <div class="tracklist">
+        <div class="track-item" onclick="playTrack('albums/Graduation/Kanye West - Good Morning.mp3')">Good Morning</div>
+        <div class="track-item" onclick="playTrack('albums/Graduation/Champion.mp3')">Champion</div>
+        <div class="track-item" onclick="playTrack('albums/Graduation/Stronger.mp3')">Stronger</div>
+        <div class="track-item" onclick="playTrack('albums/Graduation/I Wonder.mp3')">I Wonder</div>
+        <div class="track-item" onclick="playTrack('albums/Graduation/Good Life.mp3')">Good Life</div>
+         <div class="track-item" onclick="playTrack('albums/Graduation/Cant Tell Me Nothing.mp3')">Cant Tell Me Nothing</div>
+          <div class="track-item" onclick="playTrack('albums/Graduation/Barry Bonds.mp3')">Barry Bonds</div>
+           <div class="track-item" onclick="playTrack('albums/Graduation/Drunk and Hot Girls.mp3')">Drunk and Hot Girls</div>
+            <div class="track-item" onclick="playTrack('albums/Graduation/Flashing Lights.mp3')">Flashing Lights</div>
+             <div class="track-item" onclick="playTrack('albums/Graduation/Everything I Am.mp3')">Everything I Am</div>
+              <div class="track-item" onclick="playTrack('albums/Graduation/The Glory.mp3')">The Glory</div>
+               <div class="track-item" onclick="playTrack('albums/Graduation/Homecoming.mp3')">Homecoming</div>
+                <div class="track-item" onclick="playTrack('albums/Graduation/Big Brother.mp3')">Big Brother</div>
+      </div>
+    </div>
+      <div class="album">
+      <img src="covers/thegreatgig_pinkfloyd.jpg" alt="The Dark Side of The Moon" class="album-cover" height="150" width="150">
+      <div class="album-artist">Pink Floyd</div>
+      <div class="album-title">The Dark Side of The Moon</div>
+      <div class="tracklist">
+        <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Speak To Me.mp3')">Speak To Me</div>
+        <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd - Breathe (In The Air) (2023 Remaster).mp3')">Breathe (In The Air)</div>
+        <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd - On The Run (2023 Remaster).mp3')">On The Run</div>
+        <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd – Time (Official Audio).mp3')">Time</div>
+        <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd - The Great Gig In The Sky (Official 2023 Remaster).mp3')">The Great Gig In The Sky</div>
+         <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd - Money (2023 Remaster).mp3')">Money</div>
+          <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd - Us And Them (2023 Remaster).mp3')">Us And Them</div>
+           <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd - Any Colour You Like (2023 Remaster).mp3')">Any Colour You Like</div>
+            <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd - Brain Damage (2023 Remaster).mp3')">Brain Damage</div>
+             <div class="track-item" onclick="playTrack('albums/The Dark Side of The Moon/Pink Floyd - Eclipse (2023 Remaster).mp3')">Eclipse</div>
+
+      </div>
+    </div>
+  <div id="player">
+    <audio controls>
+    </audio>
+  </div>
+
+
+
+  <script src="player.js"></script>
+</body>
+</html>

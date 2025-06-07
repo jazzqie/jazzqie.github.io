@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Головна — BeatCloud</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="blackpencil.png" type="image/png">
+</head>
+<body>
+  <header>
+     <div class="logo">BeatCloud
+        <img src="logotype.png" alt="logotype  BeatCloud" style="width: 50px; height: 50px;">
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="artists.html">Артисти</a>
+    <a href="playlists.html">Плейлісти</a>
+    <a href="my-tracks.html">Мої треки</a>
+    <a href="about.html">Про нас</a>
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <a href="https://www.instagram.com/BeatCloud/" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+             alt="Instagram" style="width:40px; height:40px;">
+      </a>
+      <a href="https://www.youtube.com/@BeatCloud" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+             alt="YouTube" style="width:40px; height:auto;">
+      </a>
+      <a href="https://www.linkedin.com/in/BeatCloud/" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+             alt="LinkedIn" style="width:40px; height:40px;">
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <center><h1>Ласкаво просимо на BeatCloud</h1>
+    <p>Платформа для завантаження, прослуховування і обміну музикою.</p></center>
+
+   <section id="search">
+      <h2>Пошук</h2>
+      <form>
+        <input type="text" placeholder="Пошук за назвою треку або виконавцем" id="search-input">
+        <button type="submit">Знайти</button>
+      </form>
+      <div id="search-results"></div>
+    </section>
+
+
+    <!-- Хіти тижня -->
+    <section id="top-charts-section">
+     <center> <h2>Хіти тижня</h2></center>
+      <div class="chart-container" >
+        <div class="track" onclick="playTrack('tracks/Kendrick.mp3')">
+          <img src="covers/humble_kendrick.jpg" alt="HUMBLE." class="track-cover" height=200px width=200px>
+          <div class="track-title">HUMBLE.</div>
+          <div class="track-artist">Kendrick Lamar</div>
+          <span class="plays">1,245,678 прослуховувань</span>
+        </div>
+        
+        <div class="track" onclick="playTrack('tracks/Arctic.mp3')">
+          <img src="covers/505_ArcticMonkeys.jpg" alt="505" class="track-cover" height=200px width=200px>
+          <div class="track-title">505</div>
+          <div class="track-artist">Arctic Monkeys</div>
+          <span class="plays">987,543 прослуховувань</span>
+        </div>
+        
+        <div class="track" onclick="playTrack('tracks/Sinatra.mp3')">
+          <img src="covers/flymetothemoon_Sinatra.jpg" alt="Fly Me To The Moon" class="track-cover" height=200px width=200px>
+          <div class="track-title">Fly me to the moon</div>
+          <div class="track-artist">Frank Sinatra</div>
+          <span class="plays">876,321 прослуховувань</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Хіти місяця -->
+    <section id="top-charts-section">
+     <center></cener> <h2>Хіти місяця</h2></center>
+      <div class="chart-container">
+        <div class="track" onclick="playTrack('tracks/Jackson.mp3')">
+          <img src="covers/i'mbad_Jackson.jpg" alt="Bad" class="track-cover" height=200px width=200px>
+          <div class="track-title">Bad</div>
+          <div class="track-artist">Michael Jackson</div>
+          <span class="plays">3,456,789 прослуховувань</span>
+        </div>
+        
+        <div class="track" onclick="playTrack('tracks/Metallica.mp3')">
+          <img src="covers/entersandman_metallica.jpg" alt="Enter Sandman" class="track-cover" height=200px width=200px>
+          <div class="track-title">Enter Sandman</div>
+          <div class="track-artist">Metallica</div>
+          <span class="plays">2,345,678 прослуховувань</span>
+        </div>
+        
+        <div class="track" onclick="playTrack('tracks/PinkFLoyd.mp3')">
+          <img src="covers/thegreatgig_pinkfloyd.jpg" alt="The great gig in the sky" class="track-cover" height=200px width=200px>
+          <div class="track-title">The great gig in the sky</div>
+          <div class="track-artist">Pink Floyd</div>
+          <span class="plays">1,973,163 прослуховувань</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <div id="player">
+    <audio controls>
+    </audio>
+  </div>
+
+  <script src="player.js"></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+/* Основні кольори */
+
+:root {
+  --bg-dark: #172121;
+  --bg-secondary: #444554;
+  --neutral: #7F7B82;
+  --accent: #BFACB5;
+  --text-light: #E5D0CC;
+}
+
+
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #172121;
+      color: #E5D0CC;
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "main nav"
+        "footer footer";
+      grid-template-columns: 1fr 200px;
+      grid-template-rows: auto 1fr auto;
+      height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #444554;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo{
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--text-light);
+      justify-content: space-between;
+      display: flex;
+      align-items: center ;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: #34343d;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    nav a {
+      color: #E5D0CC;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #BFACB5;
+    }
+
+    main {
+      grid-area: main;
+      padding: 20px;
+      padding-bottom: 80px;
+      overflow-y: auto;
+    }
+
+    #player {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: var(--neutral);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+section {
+  margin-bottom: 3rem;
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+h2, h3 {
+  color: var(--accent);
+}
+
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--neutral);
+  color: var(--text-light);
+}
+
+form button {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #a88e99;
+}
+
+#player audio {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 5px;
+    outline: none; /* Прибираємо стандартний outline */
+}
+
+ .chart-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+
+  }
+  
+  .track {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    background: #383945 ;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transition: transform 0.2s ease-in-out;
+  }
+  .track:hover {
+    transform: translateY(-5px);
+  }
+  
+  .track-info {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .track-cover {
+    margin-bottom: 10px;
+  }
+  
+  .plays {
+    font-size: 0.8em;
+    color: #666;
+  }
+   .catalog-container {
+    display: flex;
+   flex-wrap:  wrap;  
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+  }
+
+   .album-cover {
+    border-radius: 5px;
+    margin-bottom: 8px;
+  }
+
+  .album-artist {
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .album-title {
+    font-style: italic;
+    margin-bottom: 8px;
+    color: #666;
+  }
+
+   .tracklist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    width: 100%;
+    padding: 5px 0;
+    line-height: 1.2;
+    overflow-y: auto;
+    margin-top: 10px;
+  }
+
+  .track-item:hover {
+    background-color: rgba(0,0,0,0.1)
+  }
+   .track-item {
+    cursor: pointer;
+    padding: 3px 0;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+
+   .artists-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+    
+    .artist-card {
+      background: var(--accent);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .artist-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .artist-photo {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .artist-info {
+      padding: 20px;
+    }
+    
+    .artist-name {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    
+    .artist-genre {
+      display: inline-block;
+      background: var(--neutral);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+    
+    .artist-bio {
+      color: #666;
+      line-height: 1.6;
+      font-size: large;
+    }
+    
+    .artist-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: #888;
+    }
+    
+.playlists-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Відстань між плейлістами */
+  justify-content: center; /* Центрує плейлісти */
+  padding: 20px;
+}
+
+.playlist {
+  background-color: #383945;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: auto; /* Ширина одного плейліста */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playlist-cover {
+  width: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer; /* Курсор-вказівник для клікабельності */
+}
+
+.playlist-info {
+  margin-bottom: 10px;
+  cursor: pointer; /* Курсор-вказівник для клікабельності */
+  width: 100%; /* Займає всю доступну ширину для клікабельності */
+}
+
+.playlist-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.playlist-description {
+  font-size: 0.9em;
+  color: #bbb;
+}
+#upload-section {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: var(--bg-secondary); /* Новий колір */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="file"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid var(--neutral); /* Новий колір */
+  border-radius: 5px;
+  background-color: var(--bg-dark); /* Новий колір */
+  color: var(--text-light); /* Новий колір */
+  font-size: 1em;
+}
+
+
+.upload-form input[type="file"]::file-selector-button {
+  background-color: rgb(2, 177, 177);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upload-form input[type="file"]::file-selector-button:hover {
+  background-color: darkcyan;
+}
+
+
+.upload-form button[type="submit"] {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.2s ease;
+}
+
+.upload-form button[type="submit"]:hover {
+  background-color: #a88e99;
+}
+
+#my-tracks-section {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: var(--bg-secondary); /* Новий колір */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.tracks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#top-charts-section {
+  padding: 20px;
+  width : auto;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
